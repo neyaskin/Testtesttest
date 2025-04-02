@@ -25,6 +25,8 @@ public partial class MainWindow : Window
         var validationResult = Regex.IsMatch(DataFromApi, pattern);
         ValidationResultTBlock.Text = validationResult ? "ФИО содержит запрещенные символы" : "ФИО не содержит запрещенные символы";
         
+        
+        
         using var doc = WordprocessingDocument.Open(@"TestCase.docx", true);
         var document = doc.MainDocumentPart.Document;
 
